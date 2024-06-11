@@ -144,7 +144,7 @@
               <div class="card-body">
                 <h5 class="card-title">
                   <span id="spancodigo3">103</span> -
-                  <span id="spannombre3">iPhone 11 Pro</span>
+                  <span id="spannombre3">iPhone 11 Pro Max</span>
                 </h5>
                 <p class="card-text">
                   Procesador: A13 Bionic <br />
@@ -196,46 +196,56 @@
           </div>
         </div>
       </section>
+
       <section>
         <div class="row">
-          <div class="col">
-            <h2>Artículos de importación</h2>
-            <ul>
-              <li>Urquiza 2153</li>
-              <li>2200 - San Lorenzo - Santa Fe</li>
-              <li>Responsable Inscripto</li>
-              <li>CUIT: 30-56032503-3</li>
-              <li>I. Brutos: CM 921-750546</li>
-            </ul>
-          </div>
-          <div class="col">
-            <h2>Registrate</h2>
-            <form action="" class="form-control">
-              <div class="row">
-                <div class="form-floating mb-3">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="floatingInput"
-                    placeholder="name@example.com"
-                  />
-                  <label for="floatingInput">Correo electrónico</label>
-                </div>
-                <div class="form-floating">
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="floatingPassword"
-                    placeholder="Password"
-                  />
-                  <label for="floatingPassword">Contraseña</label>
-                </div>
-                <button type="submit" class="btn btn-primary">
-                  Registrarse
-                </button>
-              </div>
-            </form>
-          </div>
+          <table class="table table-striped">
+            <thead class="table-dark">
+              <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Importe</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="codigo1"></td>
+                <td id="nombre1"></td>
+                <td id="cantidad1"></td>
+                <td id="precio1"></td>
+                <td id="importe1"></td>
+              </tr>
+              <tr>
+                <td id="codigo2"></td>
+                <td id="nombre2"></td>
+                <td id="cantidad2"></td>
+                <td id="precio2"></td>
+                <td id="importe2"></td>
+              </tr>
+              <tr>
+                <td id="codigo3"></td>
+                <td id="nombre3"></td>
+                <td id="cantidad3"></td>
+                <td id="precio3"></td>
+                <td id="importe3"></td>
+              </tr>
+              <tr>
+                <td id="codigo4"></td>
+                <td id="nombre4"></td>
+                <td id="cantidad4"></td>
+                <td id="precio4"></td>
+                <td id="importe4"></td>
+              </tr>
+            </tbody>
+            <tfoot class="table-primary">
+              <tr>
+                <td colspan="4">Total a pagar:</td>
+                <td id="total"></td>
+              </tr>
+            </tfoot>
+          </table>
         </div>
       </section>
     </main>
@@ -250,5 +260,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="./controladores/nota-pedido.js"></script>
   </body>
 </html>
