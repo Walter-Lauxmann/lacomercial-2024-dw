@@ -83,8 +83,8 @@
               />
               <div class="card-body">
                 <h5 class="card-title">
-                  <span id="spancodigo1">101</span> -
-                  <span id="spannombre1">iPhone SE</span>
+                  <span name="spancodigo">101</span> -
+                  <span name="spannombre">iPhone SE</span>
                 </h5>
                 <p class="card-text">
                   Procesador: A13 Bionic <br />
@@ -92,10 +92,10 @@
                   Cámaras: 7 Mp / 12 Mp <br />
                   Pantalla: 4,7 IPS Retina
                 </p>
-                <h5>$ <span id="spanprecio1">74999</span>.-</h5>
+                <h5>$ <span name="spanprecio">74999</span>.-</h5>
                 <input
                   type="number"
-                  id="inputcantidad1"
+                  name="inputcantidad"
                   class="form-control"
                   value="0"
                   min="0"
@@ -114,8 +114,8 @@
               />
               <div class="card-body">
                 <h5 class="card-title">
-                  <span id="spancodigo2">102</span> -
-                  <span id="spannombre2">Motorola Moto G100</span>
+                  <span name="spancodigo">102</span> -
+                  <span name="spannombre">Motorola Moto G100</span>
                 </h5>
                 <p class="card-text">
                   Procesador: Octa-Core (3,2 GHz) <br />
@@ -123,10 +123,10 @@
                   Cámaras: 13 Mp / 64 Mp <br />
                   Pantalla: 6,7 FHD+
                 </p>
-                <h5>$ <span id="spanprecio2">50000</span>.-</h5>
+                <h5>$ <span name="spanprecio">50000</span>.-</h5>
                 <input
                   type="number"
-                  id="inputcantidad2"
+                  name="inputcantidad"
                   class="form-control"
                   value="0"
                   min="0"
@@ -145,8 +145,8 @@
               />
               <div class="card-body">
                 <h5 class="card-title">
-                  <span id="spancodigo3">103</span> -
-                  <span id="spannombre3">iPhone 11 Pro Max</span>
+                  <span name="spancodigo">103</span> -
+                  <span name="spannombre">iPhone 11 Pro Max</span>
                 </h5>
                 <p class="card-text">
                   Procesador: A13 Bionic <br />
@@ -154,10 +154,10 @@
                   Cámaras: 12 Mp / 12 Mp <br />
                   Pantalla: 5,8 Super Retina XDR
                 </p>
-                <h5>$ <span id="spanprecio3">232901</span>.-</h5>
+                <h5>$ <span name="spanprecio">232901</span>.-</h5>
                 <input
                   type="number"
-                  id="inputcantidad3"
+                  name="inputcantidad"
                   class="form-control"
                   value="0"
                   min="0"
@@ -176,8 +176,8 @@
               />
               <div class="card-body">
                 <h5 class="card-title">
-                  <span id="spancodigo4">201</span> -
-                  <span id="spannombre4">Samsung Galaxy A72</span>
+                  <span name="spancodigo">201</span> -
+                  <span name="spannombre">Samsung Galaxy A72</span>
                 </h5>
                 <p class="card-text">
                   Procesador: Octa-Core (2,3 GHz) <br />
@@ -185,10 +185,10 @@
                   Cámaras: 32 Mp / 64 Mp <br />
                   Pantalla: 6,7 FHD+
                 </p>
-                <h5>$ <span id="spanprecio4">66999</span>.-</h5>
+                <h5>$ <span name="spanprecio">66999</span>.-</h5>
                 <input
                   type="number"
-                  id="inputcantidad4"
+                  name="inputcantidad"
                   class="form-control"
                   value="0"
                   min="0"
@@ -213,35 +213,8 @@
                 <th>Importe</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td id="codigo1"></td>
-                <td id="nombre1"></td>
-                <td id="cantidad1"></td>
-                <td id="precio1"></td>
-                <td id="importe1"></td>
-              </tr>
-              <tr>
-                <td id="codigo2"></td>
-                <td id="nombre2"></td>
-                <td id="cantidad2"></td>
-                <td id="precio2"></td>
-                <td id="importe2"></td>
-              </tr>
-              <tr>
-                <td id="codigo3"></td>
-                <td id="nombre3"></td>
-                <td id="cantidad3"></td>
-                <td id="precio3"></td>
-                <td id="importe3"></td>
-              </tr>
-              <tr>
-                <td id="codigo4"></td>
-                <td id="nombre4"></td>
-                <td id="cantidad4"></td>
-                <td id="precio4"></td>
-                <td id="importe4"></td>
-              </tr>
+            <tbody id="detalle">              
+              
             </tbody>
             <tfoot class="table-primary">
               <tr>
