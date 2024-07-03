@@ -73,131 +73,8 @@
     </header>
     <main class="container shadow">
       <section>
-        <div class="row">
-          <div class="col">
-            <div class="card" style="width: 18rem">
-              <img
-                src="./imagenes/productos/iPhone-SE-Black.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  <span name="spancodigo">101</span> -
-                  <span name="spannombre">iPhone SE</span>
-                </h5>
-                <p class="card-text">
-                  Procesador: A13 Bionic <br />
-                  Almacenamiento: 128 GB <br />
-                  Cámaras: 7 Mp / 12 Mp <br />
-                  Pantalla: 4,7 IPS Retina
-                </p>
-                <h5>$ <span name="spanprecio">74999</span>.-</h5>
-                <input
-                  type="number"
-                  name="inputcantidad"
-                  class="form-control"
-                  value="0"
-                  min="0"
-                  max="30"
-                  onchange="calcular()"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem">
-              <img
-                src="./imagenes/productos/Motorola-Moto-G100.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  <span name="spancodigo">102</span> -
-                  <span name="spannombre">Motorola Moto G100</span>
-                </h5>
-                <p class="card-text">
-                  Procesador: Octa-Core (3,2 GHz) <br />
-                  Almacenamiento: 128 GB <br />
-                  Cámaras: 13 Mp / 64 Mp <br />
-                  Pantalla: 6,7 FHD+
-                </p>
-                <h5>$ <span name="spanprecio">50000</span>.-</h5>
-                <input
-                  type="number"
-                  name="inputcantidad"
-                  class="form-control"
-                  value="0"
-                  min="0"
-                  max="30"
-                  onchange="calcular()"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem">
-              <img
-                src="./imagenes/productos/Iphone-11-Pro.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  <span name="spancodigo">103</span> -
-                  <span name="spannombre">iPhone 11 Pro Max</span>
-                </h5>
-                <p class="card-text">
-                  Procesador: A13 Bionic <br />
-                  Almacenamiento: 256 GB <br />
-                  Cámaras: 12 Mp / 12 Mp <br />
-                  Pantalla: 5,8 Super Retina XDR
-                </p>
-                <h5>$ <span name="spanprecio">232901</span>.-</h5>
-                <input
-                  type="number"
-                  name="inputcantidad"
-                  class="form-control"
-                  value="0"
-                  min="0"
-                  max="30"
-                  onchange="calcular()"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem">
-              <img
-                src="./imagenes/productos/Samsung-Galaxy-A72.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">
-                  <span name="spancodigo">201</span> -
-                  <span name="spannombre">Samsung Galaxy A72</span>
-                </h5>
-                <p class="card-text">
-                  Procesador: Octa-Core (2,3 GHz) <br />
-                  Almacenamiento: 128 GB <br />
-                  Cámaras: 32 Mp / 64 Mp <br />
-                  Pantalla: 6,7 FHD+
-                </p>
-                <h5>$ <span name="spanprecio">66999</span>.-</h5>
-                <input
-                  type="number"
-                  name="inputcantidad"
-                  class="form-control"
-                  value="0"
-                  min="0"
-                  max="30"
-                  onchange="calcular()"
-                />
-              </div>
-            </div>
-          </div>
+        <div class="row" id="listado">
+          
         </div>
       </section>
 
@@ -237,6 +114,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="./controladores/lista-articulos.js" type="module"></script>
     <script src="./controladores/nota-pedido.js"></script>
   </body>
 </html>
