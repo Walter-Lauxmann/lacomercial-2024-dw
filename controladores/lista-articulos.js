@@ -1,8 +1,15 @@
-import { articulos } from "../modelos/articulos.js";
+import { obtenerArticulos } from "../modelos/articulos.js";
 
-const listado = document.querySelector('#listado');
+const listado = document.querySelector("#listado");
 
-articulos.map(articulo => {
+document.addEventListener('DOMContentLoaded', ()=> {
+  mostrarArticulos();
+})
+
+async function mostrarArticulos() {
+  const articulos = await obtenerArticulos();
+
+  articulos.map((articulo) => {
     listado.innerHTML += `
     <div class="col">
             <div class="card" style="width: 18rem">
@@ -36,5 +43,6 @@ articulos.map(articulo => {
             </div>
           </div>
     
-    `
-})
+    `;
+  });
+}

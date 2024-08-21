@@ -39,7 +39,7 @@
 
         /**
          * Método constructor
-         * @param: t la tabla de la Base de Datos
+         * @param t la tabla de la Base de Datos
          */
         public function __construct($t) {
             parent::__construct(); // Ejecutamos el constructor padre
@@ -106,7 +106,7 @@
                 $sql .= " LIMIT $this->limite"; // Agregamos el límite
             }
 
-            echo $sql; // Mostramos la instrucción SQL
+            // echo $sql; // Mostramos la instrucción SQL
 
             // Ejecutamos la consulta y la guardamos en $resultado
             $resultado = $this->db->query($sql);
@@ -118,7 +118,7 @@
             $datos_json = json_encode($datos);
 
             // devolvemos los datos
-            return $datos;
+            return $datos_json;
         }
 
     }
