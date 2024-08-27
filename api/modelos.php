@@ -121,6 +121,70 @@
             return $datos_json;
         }
 
+        /**
+         * Inserta un dato en la Base de Datos
+         * @param valores los valores a insertar
+         */
+        public function insertar($valores) {
+            // INSERT INTO productos (codigo, nombre, descripcion, precio, imagen)
+            // VALUES ('101','Xiaomi M9','Procesador...','120000','xiaomi.jpg')
+
+            $atributos = '';
+            $datos = '';
+            // Para cada $valores como $key => $value
+            foreach($valores as $key => $value) {
+                $atributos .= $key. ','; // Agregamos las $key a $atributos
+                $datos .= "'".$value."',"; // Agregamos los $value a $datos
+            }
+            // Quitamos el último caracter (,)
+            $atributos = substr($atributos,0,strlen($atributos)-1);
+            $datos = substr($datos,0,strlen($datos)-1);
+
+            // Guardamos en $sql la instrucción INSERT
+            $sql = "INSERT INTO $this->tabla($atributos) VALUES($datos)";
+
+            echo $sql; // Mostramos la instrucción SQL resultante
+
+            // Ejecutamos la instrucción SQL
+            $this->db->query($sql);
+        }
+
+        /**
+         * Actualiza los datos en la Base de Datos
+         * @param valores los valores a modificar
+         */
+        public function actualizar($valores) {
+            // UPDATE productos SET codigo='101', nombre='Xiaomi M9', descripcion='Procesador...', precio='120000', imagen='xiaomi.jpg'
+            // WHERE id=8
+
+            // Guardamos la instrucción SQL
+            $sql = "UPDATE $this->tabla SET ";
+            // Para cada $valores como $key => $value
+            foreach($valores as $key => $value) {
+                // Agregamos a la instrucción SQL los $key y $value
+                $sql .= $key."='".$value."',";
+            }
+            $sql = substr($sql,0,strlen($sql)-1); // Quitamos el último caracter (,)
+
+            // Agregamos el criterio
+            $sql .= " WHERE $this->criterio";
+
+            echo $sql; // Mostramos el SQL resultante
+
+            //Ejecutamos la instrucción SQL
+            $this->db->query($sql);
+        }
+
+        /**
+         * Elimina un dato de la Base de Datos
+         */
+        public function eliminar() {
+            // DELETE FROM productos WHERE id=8
+            $sql = "DELETE FROM $this->tabla WHERE $this->criterio";
+            // Ejecutamos la instrucción SQL
+            $this->db->query($sql);
+        }
+
     }
 
 ?>
