@@ -6,10 +6,27 @@ const url = './api/datos.php?tabla=productos';
  * @return datos los datos en formato JSON
  */
 export async function obtenerArticulos() {
-    const res = await fetch(url);
+    const res = await fetch(`${url}&accion=seleccionar`);
     const datos = await res.json();
     if(res.status !== 200) {
         throw Error('No se pudo obtener los datos');
     }
     return datos;
 }
+
+/**
+ * Inserta los datos en la Base de Datos
+ * @param datos los datos a insertar
+ */
+export function insertarArticulos(datos) {
+    fetch(`${url}&accion=insertar`, {
+        method: 'POST',
+        body: datos
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        return data;
+    })
+}
+
