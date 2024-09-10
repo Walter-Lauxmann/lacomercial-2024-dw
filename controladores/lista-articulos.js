@@ -1,6 +1,17 @@
-import { obtenerArticulos } from "../modelos/articulos.js";
+import { obtenerArticulos, insertarArticulos } from "../modelos/articulos.js";
 
 const listado = document.querySelector("#listado");
+
+// Formulario
+const formulario = document.querySelector('#formulario');
+const formularioModal = new bootstrap.Modal(document.querySelector('#formularioModal'));
+const btnNuevo = document.querySelector('#btnNuevo');
+
+// Inputs
+const inputCodigo = document.querySelector('#codigo');
+const inputNombre = document.querySelector('#nombre');
+const inputDescripcion = document.querySelector('#descripcion');
+const inputPrecio = document.querySelector('#precio');
 
 document.addEventListener('DOMContentLoaded', ()=> {
   mostrarArticulos();
@@ -46,3 +57,32 @@ async function mostrarArticulos() {
     `;
   });
 }
+
+/**
+ * Ejecuta el evento click del botón Nuevo
+ */
+btnNuevo.addEventListener('click', () => {
+  // Limpiamos los inputs
+  inputCodigo.value = null;
+  inputNombre.value = null;
+  inputDescripcion.value = null;
+  inputPrecio.value = null;  
+
+  // Mostramos el formulario Modal
+  formularioModal.show();
+})
+
+/**
+ * Ejecuta el evento submit del formulario
+ */
+formulario.addEventListener('submit', (e) => {
+  e.preventDefault(); // Previene la acción por defecto
+
+  const datos = new FormData(formulario); // Guardamos los datos del formulario
+
+  insertarArticulos(datos); // Ejecutamos el método insertarArticulos del modelo
+
+  mostrarArticulos(); // Mostramos los artículos
+
+})
+
