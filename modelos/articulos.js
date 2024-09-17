@@ -30,3 +30,32 @@ export function insertarArticulos(datos) {
     })
 }
 
+/**
+ * Actualiza los datos en la Base de Datos
+ * @param datos los datos a actualizar
+ * @id el id del artículo
+ */
+export const actualizarArticulos = (datos, id) => { // export function actualizarArticulos(datos. id) {}
+    fetch(`${url}&accion=actualizar&id=${id}`, {
+        method: 'POST',
+        body: datos
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        return data;
+    });
+}
+
+/**
+ * Elimina los datos en la Base de Datos
+ * @param id el id del artículo
+ */
+export const eliminarArticulo = (id) => {
+    fetch(`${url}&accion=eliminar&id=${id}`, {})
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        return data;
+    })
+}
