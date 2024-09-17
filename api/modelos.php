@@ -143,7 +143,7 @@
             // Guardamos en $sql la instrucción INSERT
             $sql = "INSERT INTO $this->tabla($atributos) VALUES($datos)";
 
-            echo $sql; // Mostramos la instrucción SQL resultante
+            //echo $sql; // Mostramos la instrucción SQL resultante
 
             // Ejecutamos la instrucción SQL
             $this->db->query($sql);
@@ -169,7 +169,7 @@
             // Agregamos el criterio
             $sql .= " WHERE $this->criterio";
 
-            echo $sql; // Mostramos el SQL resultante
+            //echo $sql; // Mostramos el SQL resultante
 
             //Ejecutamos la instrucción SQL
             $this->db->query($sql);

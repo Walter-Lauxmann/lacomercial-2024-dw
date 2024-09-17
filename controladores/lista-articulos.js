@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
 async function mostrarArticulos() {
   articulos = await obtenerArticulos();
+  listado.innerHTML = ''; // Borramos el listado
 
   articulos.map((articulo) => {
     listado.innerHTML += `
@@ -133,13 +134,13 @@ on(document, 'click', '.btn-editar', e =>{
 
   id = cardFooter.querySelector('.id-articulo').value; // Guardamos el id del artículo
 
-  articulo = articulos.find(item, item.id == id); // Buscamos el artículo con ese id
+  articulo = articulos.find(item => item.id == id); // Buscamos el artículo con ese id
 
   // Asignamos los valores a los input del formulario
-  inputCodigo = articulo.codigo;
-  inputNombre = articulo.nombre;
-  inputDescripcion = articulo.descripcion;
-  inputPrecio = articulo.precio;
+  inputCodigo.value = articulo.codigo;
+  inputNombre.value = articulo.nombre;
+  inputDescripcion.value = articulo.descripcion;
+  inputPrecio.value = articulo.precio;
   
 
   // Mostramos el formulario
@@ -155,7 +156,7 @@ on(document, 'click', '.btn-borrar', e => {
   const cardFooter = e.target.parentNode;
   id = cardFooter.querySelector('.id-articulo').value;
 
-  articulo = articulos.find(item, item.id == id);
+  articulo = articulos.find(item => item.id == id);
 
   let aceptar = confirm(`¿Realmente desea eliminar a ${articulo.nombre}?`);
   if(aceptar) {
