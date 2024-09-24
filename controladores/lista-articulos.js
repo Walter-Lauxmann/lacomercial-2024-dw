@@ -14,6 +14,10 @@ const inputCodigo = document.querySelector('#codigo');
 const inputNombre = document.querySelector('#nombre');
 const inputDescripcion = document.querySelector('#descripcion');
 const inputPrecio = document.querySelector('#precio');
+const inputImagen = document.querySelector('#imagen');
+
+// Imagen del formulario
+const frmImagen = document.querySelector('#frmimagen');
 
 // Variables
 let opcion = '';
@@ -65,7 +69,10 @@ btnNuevo.addEventListener('click', () => {
   inputCodigo.value = null;
   inputNombre.value = null;
   inputDescripcion.value = null;
-  inputPrecio.value = null;  
+  inputPrecio.value = null;
+  inputImagen.value = null;
+
+  frmImagen.src = './imagenes/productos/nodisponible.png';
 
   // Mostramos el formulario Modal
   formularioModal.show();
@@ -141,6 +148,8 @@ on(document, 'click', '.btn-editar', e =>{
   inputNombre.value = articulo.nombre;
   inputDescripcion.value = articulo.descripcion;
   inputPrecio.value = articulo.precio;
+
+  frmImagen.src = `./imagenes/productos/${articulo.imagen}`;
   
 
   // Mostramos el formulario
