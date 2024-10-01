@@ -36,7 +36,7 @@ async function mostrarArticulos() {
 
   articulos.map((articulo) => {
     listado.innerHTML += `
-    <div class="col">
+          <div class="col">
             <div class="card" style="width: 18rem">
               <img src="./imagenes/productos/${articulo.imagen}" class="card-img-top" alt="${articulo.nombre}" />
               <div class="card-body">
@@ -55,8 +55,7 @@ async function mostrarArticulos() {
                 <input type="hidden" class="id-articulo" value="${articulo.id}" />
               </div>
             </div>
-          </div>
-    
+          </div>    
     `;
   });
 }

@@ -54,24 +54,42 @@
               </ul>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+          <div id="nav-login">
+            <div class="d-flex" id="div-login">
+              <form id="form-login">
+                <input
+                  class="form-control me-2"
+                  type="text"
+                  placeholder="Usuario"
+                  aria-label="usuario"
+                  name="usuario"
+                  id="usuario"
+                />
+                <input
+                  class="form-control me-2"
+                  type="password"
+                  placeholder="Contraseña"
+                  aria-label="password"
+                  name="password"
+                  id="password"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Login
+                </button>
+              </form>
+            </div>
+            <div class="d-none" id="div-logout">
+              <span id="texto-logueado"></span>
+              <button class="btn btn-outline-primary" id="btn-logout">Cerrar sesión</button>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
     <header class="bg-primary text-white text-center">
       <h1>Lista de artículos</h1>
     </header>
-    
+
     <!-- Mensaje de alerta -->
     <div id="alerta"></div>
 

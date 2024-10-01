@@ -63,7 +63,6 @@ if(isset($_GET['tabla'])) { // Si está seteado $_GET['tabla]
                 echo json_encode($mensaje);
                 break;
         }
-
         
     }
     
