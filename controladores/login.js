@@ -62,14 +62,14 @@ const verificar = () => {
         logueado = true;
     }
     if(logueado) {
-        divLogin.classList.remove('d-flex');
+        divLogin.classList.remove('d-block');
         divLogin.classList.add('d-none');
         divLogout.classList.remove('d-none');
-        divLogout.classList.add('d-flex');
+        divLogout.classList.add('d-block');
     } else {
         divLogin.classList.remove('d-none');
-        divLogin.classList.add('d-flex');
-        divLogout.classList.remove('d-flex');
+        divLogin.classList.add('d-block');
+        divLogout.classList.remove('d-block');
         divLogout.classList.add('d-none');
     }
 }

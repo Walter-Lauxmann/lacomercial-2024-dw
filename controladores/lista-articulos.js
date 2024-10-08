@@ -26,7 +26,27 @@ let mensajeAlerta = '';
 let articulos = [];
 let articulo = {};
 
+// Variables de control de usuario
+let usuario = '';
+let logueado = false;
+
+/**
+ * Control de usuario
+ */
+const controlUsuario = () => {
+  if(sessionStorage.getItem('usuario')) {
+    usuario = sessionStorage.getItem('usuario');
+    logueado = true;
+  }
+  if(logueado) {
+    btnNuevo.style.display = 'inline';
+  } else {
+    btnNuevo.style.display = 'none';
+  }
+}
+
 document.addEventListener('DOMContentLoaded', ()=> {
+  controlUsuario();
   mostrarArticulos();
 })
 
@@ -49,7 +69,7 @@ async function mostrarArticulos() {
                 <h5>$ <span name="spanprecio">${articulo.precio}</span>.-</h5>
                 <input  type="number" name="inputcantidad" class="form-control" value="0" min="0" max="30" onchange="calcular()" />
               </div>
-              <div class="card-footer d-flex justify-content-center">
+              <div class="card-footer ${logueado?'d-flex':'d-none'} justify-content-center">
                 <button class="btn-editar btn btn-primary">Editar</button>
                 <button class="btn-borrar btn btn-danger">Borrar</button>
                 <input type="hidden" class="id-articulo" value="${articulo.id}" />
